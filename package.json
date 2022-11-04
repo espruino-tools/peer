@@ -1,6 +1,6 @@
 {
   "name": "@espruino-tools/peer",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A package used to simplify the interaction between peerjs and espruino devices",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
