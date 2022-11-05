@@ -9,12 +9,10 @@ export class Connector {
   }
 
   connectData(cb: Function = (data: any) => alert(data)) {
-    setTimeout(() => {
-      this.conn = this.peer.connect(this.#getPeerId(), (data: any) => cb(data));
-      this.conn.on('open', () => {
-        this.conn.send('connection-success-esp-tools');
-      });
-    }, 1000);
+    this.conn = this.peer.connect(this.#getPeerId(), (data: any) => cb(data));
+    this.conn.on('open', () => {
+      this.conn.send('connection-success-esp-tools');
+    });
   }
 
   connectVideo(direction: string = 'front') {
