@@ -5,7 +5,9 @@ var QRCode = require('qrcode');
 export class Host {
   peer: any;
   otherDeviceDomain: string;
-  constructor(otherDeviceDomain: string = window.location.origin + 'peer') {
+  constructor(
+    otherDeviceDomain: string = 'https://' + window.location.origin + '/peer',
+  ) {
     this.peer = new Peer();
     this.otherDeviceDomain = otherDeviceDomain;
     this.peer.on('open', () => {
