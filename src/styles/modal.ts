@@ -52,12 +52,17 @@ const styles = {
       top: 0,
       '& .modal': {
         width: 350,
-        height: 320,
+        height: 360,
         backgroundColor: 'white',
         position: 'absolute',
         left: 'calc(50% - 175px)',
-        top: 'calc(50% - 160px)',
+        top: 'calc(50% - 180px)',
         borderRadius: 7.5,
+        '& a': {
+          fontSize: 12,
+          color: 'cornflowerblue',
+          paddingLeft: 60,
+        },
         '& .close-icon': {
           width: 20,
           height: 20,
