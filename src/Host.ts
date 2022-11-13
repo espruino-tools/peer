@@ -5,9 +5,7 @@ var QRCode = require('qrcode');
 export class Host {
   peer: any;
   otherDeviceDomain: string;
-  constructor(
-    otherDeviceDomain: string = 'https://' + window.location.origin + '/peer',
-  ) {
+  constructor(otherDeviceDomain: string = window.location.origin + '/peer') {
     this.peer = new Peer();
     this.otherDeviceDomain = otherDeviceDomain;
     this.peer.on('open', () => {
@@ -90,6 +88,12 @@ export class Host {
           qr_container.appendChild(canvas);
 
           modal.appendChild(qr_container);
+
+          let anchor = document.createElement('a');
+          anchor.href = path;
+          anchor.innerText = 'Click here if the QR code isnt working';
+
+          modal.appendChild(anchor);
 
           modal_back.appendChild(modal);
 
