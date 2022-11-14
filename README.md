@@ -1,4 +1,9 @@
-# Espruino Tools -> Peer
+
+![version](https://img.shields.io/npm/v/@espruino-tools/peer)
+![build](https://img.shields.io/azure-devops/build/espruino-tooling/Espruino%2520tools/16)
+![deployment](https://img.shields.io/azure-devops/build/espruino-tooling/Espruino%2520tools/18?color=blue&label=deployment)
+
+# @espruino-tools/peer
 
 ## Data
 
