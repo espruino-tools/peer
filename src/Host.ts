@@ -13,11 +13,17 @@ export class Host {
     });
   }
 
+  /**
+   *
+   * @param func callback function to be used with remoteStream data
+   * @param info should stream information be returned
+   */
+
   getVideo(func: Function) {
     this.peer.on('call', function (call: any) {
       call.answer();
       call.on('stream', function (remoteStream: any) {
-        func(remoteStream);
+        func(remoteStream, remoteStream.getVideoTracks()[0].getSettings());
       });
     });
   }
