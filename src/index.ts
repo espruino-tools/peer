@@ -1,4 +1,4 @@
-import { Host } from "./Host";
-import { Connector } from "./Connector";
+import { Host } from './Host';
+import { Connector } from './Connector';
 
 export { Host, Connector };
